@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Car Database viewer</title>
+    <link rel="stylesheet" href = "{% static 'carsViewer/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href = "{% static 'carsViewer/css/style.css' %}" />
+    <script src="{% static 'carsViewer/js/bootstrap.min.js' %}"></script>
+</head>
+<body>
+
+
+
+
+        <nav class="navbar navbar-dark bg-dark">
+            <a href="{% url 'home' %}"><button type="button" class="btn btn-dark"><h1>HOME</h1></button></a>
+
+            <h2 class="text-light bg-dark">Car Database Viewer</h2>
+        </nav>
+
+      <div class="container-fluid">
+
+
+
+          {% block content %}
+          {% endblock %}
+      </div>
+
+
+
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+  </body>
+</html>

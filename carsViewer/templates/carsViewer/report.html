@@ -1,0 +1,39 @@
+{% extends 'carsViewer/header.html' %}
+{% load static %}
+{% block content %}
+
+    <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">{{ brand |upper }} CARS</h1>
+           <form method="post">
+               {% csrf_token %}
+            <button type="submit" class="btn btn-outline-dark">UPDATE DATABASE</button>
+           </form>
+        </div>
+      </section>
+
+
+
+    <div class="album py-5 bg-light">
+        <div class="container">
+             {% for car in cars %}
+                 {% if forloop.counter0|divisibleby:3 %}
+                    <div class="row">
+                 {% endif %}
+                    <div class="col-md-4">
+                      <div class="card mb-4 shadow-sm">
+                          <a href="{{ car.link }}"><img class="card-img-top" style="width: 100%;height: auto;" src="{{ car.photo }}"></a>
+                          <div class="card-body">
+                              <h5>{{ car.brand|upper }} {{ car.model }} {{ car.year }}</h5>
+                              <h5>{{ car.type }} {{ car.engine }}</h5>
+                          </div>
+                      </div>
+                    </div>
+                {% if forloop.counter|divisibleby:3 %}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,85 @@
+{% extends 'carsViewer/header.html' %}
+{% load static %}
+{% block content %}
+
+    <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">Select your favourite Car Brand</h1>
+        </div>
+      </section>
+
+
+    <div class="album py-5 bg-light">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="{% static 'carsViewer/img/audi.jpg' %}" alt="Card image cap">
+                  <div class="card-body">
+                      <a href="{% url 'report' carBrandName='audi' %}" class="btn btn-dark">Audi</a>
+                  </div>
+              </div>
+            </div>
+
+              <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top " src="{% static 'carsViewer/img/bmw.png' %}" alt="Card image cap">
+                  <div class="card-body">
+                      <a href="{% url 'report' carBrandName='bmw' %}" class="btn btn-dark">BWM</a>
+                  </div>
+                 </div>
+                </div>
+
+              <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="{% static 'carsViewer/img/mercedes.png' %}" alt="Card image cap">
+                  <div class="card-body">
+                      <a href="{% url 'report' carBrandName='mercedes-benz' %}" class="btn btn-dark">Mercedes</a>
+                  </div>
+                 </div>
+                </div>
+            </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="{% static 'carsViewer/img/porsche.png' %}" alt="Card image cap">
+                  <div class="card-body">
+                      <a href="{% url 'report' carBrandName='porsche' %}" class="btn btn-dark">Porsche</a>
+                  </div>
+              </div>
+            </div>
+
+              <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top"  src="{% static 'carsViewer/img/toyota.jpg' %}" alt="Card image cap">
+                  <div class="card-body">
+                      <a href="{% url 'report' carBrandName='toyota' %}" class="btn btn-dark">Toyota</a>
+                  </div>
+                 </div>
+                </div>
+
+              <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" style="-moz-transform: scaleX(-1);
+                    -o-transform: scaleX(-1);
+                    -webkit-transform: scaleX(-1);
+                    transform: scaleX(-1);
+                    filter: FlipH;
+                    -ms-filter: "FlipH";"
+                  src="{% static 'carsViewer/img/honda.png' %}" alt="Card image cap">
+                  <div class="card-body">
+                      <a href="{% url 'report' carBrandName='honda' %}" class="btn btn-dark">Honda</a>
+                  </div>
+                 </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+{% endblock %}
